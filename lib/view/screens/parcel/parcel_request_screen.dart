@@ -431,6 +431,12 @@ class _ParcelRequestScreenState extends State<ParcelRequestScreen> {
         }else {
           Get.find<ParcelController>().startLoader(true);
           Get.find<OrderController>().placeOrder(PlaceOrderBody(
+            cashPay: 0.0,
+            codPaymentMethodImage: " ",
+            codPaymentMethodName: " ",
+            codPaymentMethodTypeName: " ",
+            codmethodtype: " ",
+            methodcodtype: " ",
             cart: [], couponDiscountAmount: null, distance: parcelController.distance, scheduleAt: null,
             orderAmount: charge, orderNote: '', orderType: 'parcel', receiverDetails: widget.destinationAddress,
             paymentMethod: parcelController.paymentIndex == 0 ? 'cash_on_delivery' : parcelController.paymentIndex == 1 ? 'digital_payment' : 'wallet',
